@@ -1,0 +1,17 @@
+body {
+    font-family: "Arimo";
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2D3237;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-rendering: optimizelegibility;
+}
+
+.container {
+    width: 750px;
+}

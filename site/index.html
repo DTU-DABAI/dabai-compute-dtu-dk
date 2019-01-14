@@ -12,7 +12,31 @@
   <script src="js/vendor/jquery-1.11.0.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
     <script src="js/bootstrap.js"></script>
-
+    <script src="js/citation.min.js"></script>
+    
+    <script type="text/javascript">
+       $(document).ready(function() {
+	   console.log('citation-js');
+	   let Cite = require('citation-js');
+	   
+	   // Set variables
+	   let work = Cite([
+	       "Q59827422", "Q50347076",
+	       "Q51794855",
+	       "Q50813856",
+	       "Q41799598",
+	   ]);
+	   let options = {
+	       format: 'html',
+	       template: 'apa',
+	       lang: 'en-US',
+	   };
+	   
+	   let output = work.format('bibliography', options);
+	   console.log(output);
+	   $("#list-of-publications").html(output)
+       });
+    </script>
 
     <style>
       .jumbotron {
@@ -277,6 +301,20 @@
 	  </div>
 	</div>
 	
+        <div class="content-section" id="publications">
+          <div class="container">
+            <div class="row">
+              <div class="heading-section col-md-6">
+		<a name="Team"><h2>Publications</h2></a>
+              </div>
+            </div>
+            <div class="row">
+	      <div class="col-md-12 col-sm-12">
+		<div id="list-of-publications"></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
         <div class="content-section" id="our-team">
           <div class="container">

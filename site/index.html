@@ -16,12 +16,12 @@
     
     <script type="text/javascript">
        $(document).ready(function() {
-	   console.log('citation-js');
 	   let Cite = require('citation-js');
 	   
 	   // Set variables
 	   let work = Cite([
-	       "Q59827422", "Q50347076",
+	       "Q59827422",
+	       "Q50347076",
 	       "Q51794855",
 	       "Q50813856",
 	       "Q41799598",
@@ -33,7 +33,6 @@
 	   };
 	   
 	   let output = work.format('bibliography', options);
-	   console.log(output);
 	   $("#list-of-publications").html(output)
        });
     </script>
